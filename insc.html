@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>FCBC | Inscription</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="about.css">
+	<link rel="stylesheet" type="text/css" href="https://unicons.iconscout.com/release/v2.1.6/css/unicons.css">
+</head>
+
+<style>
+	body{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		min-height: 50vh;
+
+	}
+
+	.wrapper{
+		background: #333;
+		color: white;
+		width: 450px;
+		border-radius: 20px;
+		margin-top: 70px;
+		margin-bottom: 4rem;
+	}
+	.form{
+		padding: 25px 30px;
+	}
+
+	.form form{
+		margin: 20px 0;
+	}
+	.form form .insc{
+		display: flex;
+		position: relative;
+		flex-direction: column;
+		margin-bottom: 10px;
+	}
+	.form form .insc input{
+		outline: none;
+	}
+	.form form .insc label{
+		margin-bottom: 2px;
+	}
+	.form form .insc input{
+		height: 40px;
+		width: 100%;
+		font-size: 16px;
+		padding: 0 10px;
+		border: 1px solid #ccc;
+		border-radius: 5px;
+	}
+	.form form .image input{
+		font-size: 17px;
+		border: none;
+	}
+	.form form .button input{
+		margin-top: 13px;
+		height: 45px;
+		border: none;
+		font-size: 17px;
+		font-weight: 400;
+		background: #444;
+		color: #fff;
+		border-radius: 5px;
+		cursor: pointer;
+	}
+	select{
+		height: 40px;
+		width: 100%;
+		font-size: 16px;
+		padding: 0 10px;
+		border: 1px solid #ccc;
+		border-radius: 5px;
+	}
+	
+
+
+
+</style>
+<body>
+	<nav class="navbar" id="">
+		<img src="imgs/logo.png" class="logo">
+		<div id="menulist">
+			<ul class="nav__menu">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="#cat">Categories</a></li>
+				<li><a href="contact.html">Events</a></li>
+				<li><a href="insc.html">Inscription</a></li>
+			</ul>
+		</div>
+		<button id="open-menu-btn"><i class="uil-bars"></i></button>
+		<button id="close-menu-btn"><i class="uil uil-multiply"></i></button>
+	</nav>
+
+	<div class="wrapper">
+		<section class="form container">
+			<h2>Inscription to FCBC</h2>
+			<form action="https://formsubmit.co/ff463f8cb54bb8f908ab6a25ec4c9acd" method="POST">
+				<div class="insc">
+					<label>First Name</label>
+					<input type="text" name="Fisrt Name :">
+				</div>
+				<div class="insc">
+					<label>Last Name</label>
+					<input type="text" name="Last Name :">
+				</div>
+				<div class="insc">
+					<label>Date of birth</label>
+					<input type="text" name="Date of Birth :">
+				</div>
+				<div class="insc">
+					<label>Originated from</label>
+					<input type="text" name="Originated from :">
+				</div>
+				<div class="insc">
+					<label>Category</label>
+					<select class="input" name="Category">
+						<option>Academie</option>
+						<option>Junior(U18)</option>
+						<option>Espoir(U21)</option>
+						<option>Senior</option>	
+					</select>
+				</div>
+				<div class="insc image">
+						<label>Select Image</label>
+	 					<input type="file" name="Photo">
+					</div>
+					<div class="insc button">
+						<input type="submit" value="Submit">
+					</div>			
+			</form>
+		</section>
+	</div>
+	<script src="javascript.js"></script>
+	<script>
+		// show/hide nav menu
+		const menu = document.querySelector(".nav__menu");
+		const menuBtn = document.querySelector("#open-menu-btn");
+		const closeBtn = document.querySelector("#close-menu-btn");
+
+		menuBtn.addEventListener('click',() => {
+			menu.style.display = "flex";
+			closeBtn.style.display = "inline-block";
+			menuBtn.style.display = "none";
+		})
+
+		// close nav menu
+		const closeNav = () => {
+			menu.style.display = "none";
+			closeBtn.style.display = "none";
+			menuBtn.style.display = "inline-block";
+		}
+
+		closeBtn.addEventListener('click', closeNav)
+	</script>
+</body>
+</html>
